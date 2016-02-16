@@ -13,13 +13,13 @@
 .guide .tip .tip-text p{text-align:center;color:#fff;font-size:22px;margin:0;line-height:1;letter-spacing:5px}
 .guide .tip .tip-text p:last-child{margin-top:20px;text-indent:26px}
 .guide .tip .tip-phone{width:60px;height:100px;top:0;left:50%;background:url(../../images/phone2.png) center no-repeat;background-size:60px 100px;margin-left:-32px}
-/*#page1{left:640px}*/
+#page1{left:640px}
 #page1 .title{width:408px;height:247px;background:url(../../images/p1-1.png) center no-repeat;left:0;top:50px;background-size: 100%;}
 #page1 .page-bg{background:url(../../images/p1-bg.png) center no-repeat;width:686px;height:544px;bottom:0px;left:-95px;background-size: 90%;}
 #page1 .p1{width:441px;height:604px;bottom:-22px;left:2px;
 background:url(../../images/p1-3.png) center no-repeat;z-index:2;-webkit-transform:translate3d(0,0,0);background-size: 90%;
 }
-/*#page2{left:1405px}*/
+#page2{left:1405px}
 #page2 .title{width:392px;height:186px;background:url(../../images/p2-title.png) center no-repeat;background-size:100% auto;left:50%;bottom:610px;-webkit-transform:translateX(-50%)}
 #page2 .page-bg{
 
