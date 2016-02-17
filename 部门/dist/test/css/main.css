@@ -86,17 +86,24 @@
   height: 739px;width: 70px;background:url(../../images/p8-left.png) center no-repeat;background-size: contain;position: absolute;left:20px;
 }
 #page8 .p8-right{
-  height: 739px;width: -px;background:url(../../images/p8-right.png) center no-repeat;background-size: contain;position: absolute;right:20px;
+  height: 739px;width: 61px;background:url(../../images/p8-right.png) center no-repeat;background-size: contain;position: absolute;right:20px;
 }
 
 /*第九页  你只要知道 ==========================================*/
 
 #page9{left:7625px}
 
-#page9 .title{width:479px;height:247px;bottom:490px;background:url(../../images/page9_title.png) center no-repeat}
+#page9 .title{width:579px;height:257px;background:url(../../images/p9-title.png) center no-repeat;background-size:contain;top:40px;}
+#page9 .p9{
+  background:url(../../images/p9.png) center no-repeat;width:643px;height:739px;background-size: contain;
+}
 
+/*第十页
+找男朋友就得找
+===============================*/
+#page10{left:8025px}
 
-.runway{position:absolute;bottom:-5px;z-index:10;width:8660px;height:222px;background:url(../../images/runway_start.png) 38px 0 no-repeat,url(../../images/runway_body.png) 156px 0 repeat-x;  /*-webkit-transform:translate3d(0,0,10px)*/}
+.runway{position:absolute;bottom:-5px;z-index:10;width:9660px;height:222px;background:url(../../images/runway_start.png) 38px 0 no-repeat,url(../../images/runway_body.png) 156px 0 repeat-x;  /*-webkit-transform:translate3d(0,0,10px)*/}
 .lizhi.run{position:fixed;width:132px;height:152px;left:320px;bottom:53px;-webkit-transform:translate3d(-50%,0,0);z-index:30}
 .lizhi.run .lizhi-logo{position:absolute;top:0;left:0;z-index:2;width:132px;height:152px;-webkit-transform-origin:66px 74px;background:url(../../images/peach.png) center no-repeat;-webkit-transform:transalte3d(0,0,0);background-size:80%;}
 .lizhi.run .lizhi-shadow{position:absolute;bottom:-8px;left:50%;-webkit-transform:translateX(-48%);width:130px;height:36px;background:url(../../images/lizhi_shadow.png) no-repeat}
