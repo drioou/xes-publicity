@@ -22,7 +22,7 @@
 </head>
 
 <body id="rundown">
-    <div class="layer-loading none">
+    <div class="layer-loading">
         <div class="lizhi">
             <!-- <div class="lizhi-logo animated"></div> -->
             <div class="percentage">0%</div>
@@ -32,13 +32,14 @@
     <div class="music" :class="{'off': !bgm}" @touchend="toggleBGM">
         <audio id="bgm" autoplay loop src="./audios/bgm.mp3"></audio>
     </div>
-    <div class="guide none" @touchend="start">
+    <div class="guide" @touchend="start">
         <div class="tip">
             <div class="tip-phone"></div>
             <div class="tip-arrow"></div>
+
             <div class="tip-text">
-                <p>点击荔枝向右倾斜屏幕</p>
-                <p>让荔枝翻滚起来！</p>
+                <p>点击桃子向右倾斜屏幕</p>
+                <p>让桃子翻滚起来！</p>
             </div>
         </div>
     </div>
@@ -47,8 +48,9 @@
             <div class="pageWrap">
                 <div id="page0" class="page">
                     <div class="title"></div>
+
                 </div>
-                <div id="page1" class="page">
+                <div id="page1" class="page hide">
                     <div class="title"></div>
                     <div class="page-bg"></div>
                     <div class="p1">
@@ -126,6 +128,7 @@
         </div>
         <div class="lizhi run">
             <div class="lizhi-logo"></div>
+            <div class="monkey"></div>
             <div class="lizhi-shadow"></div>
         </div>
         <div class="tip-click" @touchend="start">
@@ -138,18 +141,17 @@
     <div class="end" :class="{'hide': !isEnd}">
         <div class="end-wrap">
             <div class="end-inner">
-                <div class="title"></div>
+                <!-- <div class="title"></div>
                 <div class="lizhi">
                     <div class="lizhi-logo"></div>
                     <div class="lizhi-shadow"></div>
-                </div>
+                </div> -->
                 <div class="btn-group">
                     <a class="left" href="javascript:;" @touchend="replay"></a>
                     <a class="right" href="javascript:;" @touchend="toggleShareLayer"></a>
                 </div>
             </div>
         </div>
-        <a class="download" target="_blank" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.yibasan.lizhifm&amp;g_f=991784#opened"></a>
     </div>
     <div v-if="shareLayer" @touchend="toggleShareLayer" transition="fade" class="share-layer"></div>
     <script src="./javascripts/lib/vue.min.js"></script>

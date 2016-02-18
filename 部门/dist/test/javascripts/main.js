@@ -6,7 +6,7 @@
       e.hide()
     }, 600)
   }
-  var s = ["./audios/bgm.mp3", "./images/lizhi_logo.png", "./images/lizhi_shadow.png", "./images/page1_title.png", "./images/page1_bg.png", "./images/bing_head.png", "./images/bing_body.png", "./images/page2_title.png", "./images/zhou.png", "./images/kun.png", "./images/cake.png", "./images/page3_bg.png", "./images/duang.png", "./images/chenglong_body.png", "./images/chenglong_head.png", "./images/page4_title.png", "./images/page4_bg.png", "./images/envelope_back.png", "./images/envelope_front.png", "./images/paper.png", "./images/page5_title.png", "./images/page5_bg.png", "./images/rocket.png", "./images/yan1.png", "./images/yan2.png", "./images/yan3.png", "./images/yan4.png", "./images/page6_title.png", "./images/page6_bg.png", "./images/star.png", "./images/page7_title.png", "./images/page7_bg.png", "./images/xidada.png", "./images/xidada_hand.png", "./images/page8_title.png", "./images/langya_bg.png", "./images/langya.png", "./images/yangshi.png", "./images/page9_title.png", "./images/wu1.png", "./images/wu2.png", "./images/wu3.png", "./images/wu4.png", "./images/wu5.png", "./images/wu6.png", "./images/wu7.png", "./images/runway_start.png", "./images/runway_body.png"],
+  var s = ["../../audios/bgm.mp3", "../../images/p1-1.png", "../../images/p1-3.png", "../../images/p1-bg.png", "../../images/p2-1.png", "../../images/p2-2.png", "../../images/p2-bg.png", "../../images/p2_title.png", "../../images/zhou.png", "../../images/kun.png", "../../images/cake.png", "../../images/p3.png", "../../images/p3-title.png", "../../images/p3-x.png", "../../images/p4-1.png", "../../images/p4-title.png", "../../images/p4-bg.png", "../../images/p4-left.png", "../../images/p4-right.png", "../../images/p5-camer.png", "../../images/p5-title.png", "../../images/p5-yellow.png", "../../images/p5-pink.png", "../../images/p6.png", "../../images/p6-title.png", "../../images/p7.png", "../../images/p8.png", "../../images/p8-left.png", "../../images/p8-right.png", "../../images/p9.png", "../../images/p9-title.png", "../../images/p10.png", "../../images/p10-1.png", "../../images/p10-2.png", "../../images/p10-3.png", "../../images/p10-4.png", "../../images/p10-title.png", "../../images/p11-bg.png", "../../images/peach.png", "../../images/flag-end.png", "../../images/fire.png", "../../images/end-right.png", "../../images/phone2.png", "../../images/end-bg.png", "../../images/end-left.png", "../../images/share.png", "../../images/runway_start.png", "../../images/runway_body.png"],
     g = loader(s);
   g.on("progress", function(e) {
     n(".percentage").text(e + "%")
@@ -45,12 +45,13 @@
       handelInterval: function() {
         var e = this;
         e.interval = setInterval(function() {
-          var a = e.getCurrentX(); - 450 > a && (e.currentPage = 1), -1300 > a && (e.currentPage = 2), -1500 > a && (e.currentPage = 3), -2900 > a && (e.currentPage = 4), -3600 > a && (e.currentPage = 5), -4360 > a && (e.currentPage = 6), -5400 > a && (e.currentPage = 7), -6400 > a && (e.currentPage = 8),
+          var a = e.getCurrentX(); - 200 > a && (e.currentPage = 1), -1100 > a && (e.currentPage = 2), -2000 > a && (e.currentPage = 3), -2800 > a && (e.currentPage = 4), -3600 > a && (e.currentPage = 5), -4660 > a && (e.currentPage = 6), -5400 > a && (e.currentPage = 7), -6100 > a && (e.currentPage = 8),
                -7100 > a && (e.currentPage = 9),
-               -8100 > a && (e.currentPage = 10),
-               -10483 > a && (e.currentPage = 11)
+               -8500 > a && (e.currentPage = 10),
+               -8900 > a && (e.currentPage = 11)
         }, 500)
       },
+
       setSpeed: function(e) {
         if (this.canRun) {
           var a = parseInt(e.gamma / 10);
@@ -120,9 +121,9 @@
         this.isEnd = !this.End
       },
       start: function() {
-        this.canRun = !0, this.bgm = !0, n(".guide").addClass("hide"), n(".tip-click").addClass("hide"), setTimeout(function() {
-          n(".tip-click").hide(), n(".guide").hide()
-        }, 300), n("#bgm")[0].play()
+        this.canRun = !0, this.bgm = !0, n(".guide").addClass("hide"), n(".tip-click").addClass("hide"), n(".monkey").addClass("hide"),  setTimeout(function() {
+          n(".tip-click").hide(), n(".guide").hide(), n(".monkey").hide()
+        }), n("#bgm")[0].play()
       },
       toggleBGM: function() {
         this.bgm = !this.bgm;
@@ -139,33 +140,6 @@
   }), r.$watch("currentPage", function() {
     this.toggleShow()
   });
-  n.ajax({
-    url: "http://h5.lizhi.fm/getJSConfig",
-    data: {
-      url: "http://h5.lizhi.fm/congra/"
-    },
-    type: "GET",
-    dataType: "json",
-    success: function(e) {
-      wx.config({
-        debug: !1,
-        appId: e.appId,
-        timestamp: e.timestamp,
-        nonceStr: e.nonceStr,
-        signature: e.signature,
-        jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "showOptionMenu", "hideOptionMenu"]
-      }), wx.ready(function() {
-        var e = {
-          title: "滚动吧，荔枝君！",
-          link: "http://h5.lizhi.fm/congra/",
-          imgUrl: "http://h5.lizhi.fm/congra/images/wx_share.png",
-          desc: "据统计，能看懂5页的是85后，看懂7页的是90后，95后全都懂！滚不动的，嗯...蜀黍，不约！"
-        };
-        wx.onMenuShareTimeline(e), wx.onMenuShareAppMessage(e)
-      })
-    },
-    error: function() {}
-  })
 }(window, document, jQuery, Vue);
 // if( $("#page9.animate") ){
 //   $(".container").hide();
