@@ -25,8 +25,8 @@
 #page8,
 #page9,
 #page10{display: none;}*/
-#page1{left:640px}
-#page2{left:1405px}
+#page1{left:780px}
+#page2{left:1505px}
 #page3{left:2295px}
 #page4{left:3085px}
 #page5{left:3965px}
@@ -35,14 +35,18 @@
 #page8{left:6685px}
 #page9{left:7625px}
 #page10{left:8525px}
-#page11{left:9400px}
+#page11{left:9400px;}
 
-/*第一页===================================================================*/
+/*第一页
+领导
+===================================================================*/
 #page1 .title{width:408px;height:247px;background:url(../../images/p1-1.png) center no-repeat;left:0;top:50px;background-size:100%;}
 #page1 .page-bg{background:url(../../images/p1-bg.png) center no-repeat;width:686px;height:544px;bottom:0px;left:-95px;background-size:90%;}
-#page1 .p1{width:441px;height:604px;bottom:-22px;left:2px;background:url(../../images/p1-3.png) center no-repeat;z-index:2;-webkit-transform:translate3d(0,0,0);background-size:90%;}
+#page1 .p1{width:501px;height:604px;bottom:0px;left:2px;background:url(../../images/p1-3.png) center no-repeat;z-index:2;-webkit-transform:translate3d(0,0,0);background-size:90%;}
 
-/*第二页========================================================================*/
+/*第二页
+给我一颗星星
+========================================================================*/
 #page2 .title{width:492px;height:176px;background:url(../../images/p2-title.png) center no-repeat;background-size:100% auto;left:50%;bottom:570px;-webkit-transform:translateX(-50%)}
 #page2 .page-bg{background:url(../../images/p2-bg.png) center no-repeat;width:686px;height:544px;bottom:60px;background-size:80%;}
 #page2 .p2{width:686px;height:693px;bottom:0;left:2px;z-index:30;}
@@ -105,18 +109,19 @@
 #page11 .page-bg .p11-3{width:200px;height:300px;background:url(../../images/p10-4.png) center no-repeat;background-size:contain;position:absolute;bottom:20px;left:-50px;}
 #page11 .page-bg .p11-4{width:200px;height:300px;background:url(../../images/p10-3.png) center no-repeat;background-size:contain;position:absolute;right:0;bottom:-70px;}
 /*下面跑道*/
-.runway{position:absolute;bottom:0;z-index:10;width:10979px;height:171px;background:url(../../images/runway_start.png) 30px 0 no-repeat,url(../../images/runway_body.png) 156px 0 repeat-x;-webkit-transform:translate3d(0,0,10px)}
+
+.runway{position:absolute;bottom:-2px;z-index:10;width:11043px;height:219px;background:url(../../images/runway_start.png) 99px 0 no-repeat,url(../../images/runway_body.png) 156px 0 repeat-x;}
 
 
 .lizhi.run{position:fixed;width:132px;height:152px;left:320px;bottom:53px;-webkit-transform:translate3d(-50%,0,0);z-index:30}
-.lizhi.run .lizhi-logo{position:absolute;top:20px;left:0;z-index:2;width:82px;height:82px;background:url(../../images/peach.png) center no-repeat;-webkit-transform:transalte3d(0,0,0);background-size: contain;}
+.lizhi.run .lizhi-logo{position:absolute;top:20px;left:0;z-index:2;width:102px;height:102px;background:url(../../images/peach.png) center no-repeat;-webkit-transform:transalte3d(0,0,0);background-size: contain;}
 .lizhi.run .lizhi-shadow{position:absolute;bottom:-8px;left:50%;-webkit-transform:translateX(-48%);width:130px;height:36px;background:url(../../images/lizhi_shadow.png) no-repeat}
 .end{position:absolute;left:0;top:0;right:0;bottom:0;-webkit-transition:all 2s ease;overflow:hidden}
 .end.hide{z-index:-10}
 .end .end-inner{width:640px;height:860px;position:absolute;left:50%;bottom:180px;margin:0 0 0 -320px}
 .end .end-inner.scale{-webkit-transform:scale(.8)}
 .container.hide,.end.hide,.lizhi.run.hide,.tip-click.hide {
-
+opacity: 0;
 }
 /*最后一页*/
 
@@ -140,17 +145,26 @@ div.page.hide{display:none}
 .music.off{background:url(../../images/music.png) -60px 0 no-repeat}
 
 /*上面内容*/
-.scrollWrap{bottom:0;left:0;width:10979px;-webkit-backface-visibility:hidden;-webkit-perspective:1000;-webkit-transition-property:all;-webkit-transition-timing-function:linear;overflow:hidden}
+
+.scrollWrap{bottom:0;left:0;width:11043px;-webkit-backface-visibility:hidden;-webkit-perspective:1000;-webkit-transition-property:all;-webkit-transition-timing-function:linear;overflow:hidden}
+
 .scrollWrap.toLeft{-webkit-transform:translate3d(0,0,0)!important}
-.scrollWrap.toRight{-webkit-transform:translate3d(-10879px,0,0)!important}
+
+
+.scrollWrap.toRight{-webkit-transform:translate3d(-10403px,0,0)!important}
+
+
 .scrollWrap .fire{width:486px;height:613px;background:url(../../images/fire.png) center no-repeat;right:0}
 .pageWrap{white-space:nowrap;bottom:168px;left:0;background:#031324;width:100%}
 .pageWrap .page{width:640px;height:100%;position:absolute;bottom:0}
 .pageWrap .page.scale{-webkit-transform:scale(.8);bottom:-45px}
 .pageWrap .page .flag{position:absolute;bottom:-43px;left:0;width:100px;height:226px;z-index:25}
-.pageWrap #page0 .title{width:519px;height:266px;background:url(../../images/guide_title.png) center no-repeat;position:absolute;left:50%;-webkit-transform:translateX(-50%);top:160px}
+.pageWrap #page0 .title{width:519px;height:466px;background:url(../../images/guide_title.png) center no-repeat;position:absolute;left:50%;-webkit-transform:translateX(-50%);top:160px;background-size:contain;}
 .scrollWrap.top{z-index:35}
-.scrollWrap.top .flag-end{position:absolute;left:10679px;bottom:0;z-index:40;width:266px;height:551px;background:url(../../images/flag_end.png) center no-repeat}
+
+/*旗帜位置*/
+.scrollWrap.top .flag-end{position:absolute;left:10523px;bottom:0;z-index:40;width:266px;height:551px;background:url(../../images/flag_end.png) center no-repeat}
+
 .tip-click{width:126px;height:136px;position:fixed;left:50%;bottom:20px;margin-left:-63px;z-index:40;-webkit-transition:all .3s ease}
 .tip-click .tip-click-radius{width:78px;height:78px;margin:0 auto;position:relative}
 .tip-click .tip-click-inner,.tip-click .tip-click-outer{position:absolute;left:13px;top:13px;z-index:2;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.5)}

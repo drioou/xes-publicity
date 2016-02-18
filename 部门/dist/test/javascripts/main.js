@@ -45,7 +45,10 @@
       handelInterval: function() {
         var e = this;
         e.interval = setInterval(function() {
-          var a = e.getCurrentX(); - 450 > a && (e.currentPage = 1), -1300 > a && (e.currentPage = 2), -1500 > a && (e.currentPage = 3), -2900 > a && (e.currentPage = 4), -3600 > a && (e.currentPage = 5), -4360 > a && (e.currentPage = 6), -5400 > a && (e.currentPage = 7), -6400 > a && (e.currentPage = 8), -7100 > a && (e.currentPage = 9), -9100 > a && (e.currentPage = 10), -10279 > a && (e.currentPage = 11)
+          var a = e.getCurrentX(); - 450 > a && (e.currentPage = 1), -1300 > a && (e.currentPage = 2), -1500 > a && (e.currentPage = 3), -2900 > a && (e.currentPage = 4), -3600 > a && (e.currentPage = 5), -4360 > a && (e.currentPage = 6), -5400 > a && (e.currentPage = 7), -6400 > a && (e.currentPage = 8),
+               -7100 > a && (e.currentPage = 9),
+               -8100 > a && (e.currentPage = 10),
+               -10483 > a && (e.currentPage = 11)
         }, 500)
       },
       setSpeed: function(e) {
